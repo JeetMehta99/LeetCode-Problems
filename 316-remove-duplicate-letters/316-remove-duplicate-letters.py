@@ -1,5 +1,7 @@
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
+        
+        # --> Timothy: much faster coz uses lookup
 #         dic = {}
 #         for i in range(len(s)):
 #             dic[s[i]] = i
@@ -17,6 +19,7 @@ class Solution:
 #             visited.add(s[i])
 #         return "".join(stack_Arr)
         
+    # Self: comparatively slower
         arr = []
     
         for i in range(len(s)):
@@ -30,7 +33,7 @@ class Solution:
         
         return "".join(arr)
                 
-        
+        # where I misinterpreted the solution
 #         visited = set()
 #         s = list(s)
 #         temp = ""
