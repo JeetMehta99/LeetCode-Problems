@@ -10,11 +10,11 @@ class Solution:
         Do not return anything, modify root in-place instead.
         """
         self.temp = []
-        def dfs(node):
+        def dfs(node): # does the inorder traversal 
             if not node:
                 return 
             dfs(node.left)
-            self.temp.append(node) # inorder
+            self.temp.append(node) # helps to get inorder
             dfs(node.right)
         dfs(root)
         
