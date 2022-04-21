@@ -7,11 +7,7 @@ class Solution:
         if k:
             temp = []
             i = ((r*c)-k)//c 
-            # print(i)
             j = ((r*c)-k)%c
-            # print(j)
-            # r, c = divmod(m*n - k, n)
-            # r = r % m
             while k:
                 if j==c:
                     i+=1
