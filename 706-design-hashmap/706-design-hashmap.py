@@ -1,5 +1,5 @@
 class MyHashMap:
-
+### BAD APPROACH
     def __init__(self):
         self.lis = [-1 for _ in range(1000001)]
 
