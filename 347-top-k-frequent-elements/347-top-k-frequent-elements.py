@@ -1,6 +1,6 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        # O(N) 
+        # O(N). Bucket Sort
         count = {}
         freq = [[] for i in range(len(nums) + 1)] # index is freq/ count; val; times it was encountered
         for n in nums:
