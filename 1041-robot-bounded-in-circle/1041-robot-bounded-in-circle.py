@@ -7,7 +7,7 @@ class Solution:
                 x, y = x+dirX, y+dirY
             elif direction == "L":
                 dirX, dirY = -1*dirY, dirX
-            else:
+            elif direction == "R":
                 dirX, dirY = dirY, -1*dirX
             
         return (x,y) == (0, 0) or (dirX, dirY) != (0, 1)
