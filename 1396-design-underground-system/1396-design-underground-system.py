@@ -1,10 +1,9 @@
 class UndergroundSystem:
 
     def __init__(self):
-        # cust_id = (starttime, init_station)
-        self.h1 = defaultdict(tuple)
-         # start,end = end_time - start_time
-        self.h2 = defaultdict(list)
+        
+        self.h1 = defaultdict(tuple) # maps id and id station & time   (immutable)
+        self.h2 = defaultdict(list) # station name and total & count    (mutable)
 
     def checkIn(self, id: int, stationName: str, t: int) -> None:
         self.h1[id] = (t, stationName)
