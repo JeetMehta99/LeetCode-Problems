@@ -1,17 +1,18 @@
 from collections import Counter
+import heapq
 class Leaderboard:
 
     def __init__(self):
-        self.counter = Counter()
+        self.scores = collections.defaultdict(int)
 
     def addScore(self, playerId: int, score: int) -> None:
-        self.counter[playerId] += score
-
+        self.scores[playerId] += score
+        
     def top(self, K: int) -> int:
-        return sum(map(lambda x: x[1], self.counter.most_common(K)))
+        return sum(heapq.nlargest(K, self.scores.values())) #O(NlogK)
 
     def reset(self, playerId: int) -> None:
-        self.counter[playerId] = 0
+        del self.scores[playerId]
 
 
 # Your Leaderboard object will be instantiated and called as such:
