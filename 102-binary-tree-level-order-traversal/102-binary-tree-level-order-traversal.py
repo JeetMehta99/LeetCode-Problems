@@ -9,7 +9,7 @@ class Solution:
         res = []
         q = collections.deque()
         q.append(root)
-        
+
         # BFS
         while q:
             n = len(q)
