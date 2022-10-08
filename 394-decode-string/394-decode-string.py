@@ -5,13 +5,12 @@ class Solution:
             if i != "]":
                 stack.append(i)
             else:
-                str_k = ""
+                str_dummy = ""
                 while stack[-1] != "[":
-                    str_k = stack.pop() + str_k
+                    str_dummy = stack.pop() + str_dummy
                 stack.pop()
-
-                substr = ""
+                str_dummy1 = ""
                 while stack and stack[-1].isdigit():
-                    substr = stack.pop() + substr
-                stack.append(int(substr) * str_k)
+                    str_dummy1 = stack.pop() + str_dummy1
+                stack.append(int(str_dummy1)*str_dummy)
         return "".join(stack)
